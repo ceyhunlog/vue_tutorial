@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1 v-text="title"></h1>
+        <button v-text="buttonTitle"></button>
+        <p v-text="paragraph"></p>
+        <a v-bind:href="link" v-bind:data-id="dataId">Udemy</a>
+        <p v-html="details"></p>
+        <p></p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Test Başlık',
+                buttonTitle: 'Tıkla Gelsin..',
+                paragraph: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum quo autem modi provident animi ut, culpa quae a quasi delectus ipsum doloremque magnam repellendus quis suscipit ea facilis est nemo?' ,
+                link: 'https://udemy.com',
+                dataId: '1',
+                details: '<b>Bu bir haber detayıdır..</b>'
+            },
+            
+        })
+    </script>
+</body>
+</html>
