@@ -12,7 +12,8 @@
         <h1 v-text="title"></h1>
         <button v-text="buttonTitle"></button>
         <p v-text="paragraph"></p>
-        <a v-bind:href="link" v-bind:data-id="dataId">Udemy</a>
+        <!-- <a v-bind:href="link" v-bind:data-id="dataId">Udemy</a> -->
+        <a :href="link" v-bind:data-id="dataId">Udemy</a>
         <p v-html="details"></p>
         <p></p>
     </div>
@@ -21,8 +22,8 @@
         new Vue({
             el: '#app',
             data: {
-                title: 'Test Başlık',
-                buttonTitle: 'Tıkla Gelsin..',
+                title: 'Test Title',
+                buttonTitle: 'Click me..',
                 paragraph: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum quo autem modi provident animi ut, culpa quae a quasi delectus ipsum doloremque magnam repellendus quis suscipit ea facilis est nemo?' ,
                 link: 'https://udemy.com',
                 dataId: '1',
