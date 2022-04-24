@@ -18,7 +18,7 @@
     </div>
 
     <script>
-        new Vue({
+        new Vue({ // 57.06
             el: '#app',
             data: {
                 age: 0,
@@ -34,6 +34,11 @@
                 ageWriterComputed(){
                     console.log('ageWriter Computed Running')
                     return this.age >= 18 ? 'Reşittir' : 'Değildir..'
+                }
+            },
+            watch: {
+                age(newValue, oldValue){
+                    console.log(newValue, oldValue)
                 }
             }
         })
